@@ -3,7 +3,7 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "username" : "testing",
+    "username" : "testing2",
     "password_digest" : "Password1",
     "height" : 5,
     "weight": 10,
@@ -12,3 +12,21 @@ Content-Type: application/json
     "public" : true,
     "water" : 3
 }
+
+### Show method for id 1
+GET http://localhost:3000/api/users/1
+
+
+### update id 1
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+    "username" : "updated_user"
+}
+
+
+### delete id of 1
+DELETE http://localhost:3000/api/users/1
+
+
