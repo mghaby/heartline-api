@@ -1,0 +1,14 @@
+### Posting User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username" : "testing",
+    "password_digest" : "Password1",
+    "height" : 5,
+    "weight": 10,
+    "goal_weight" : 20,
+    "age" : 40,
+    "public" : true,
+    "water" : 3
+}
