@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_141752) do
+ActiveRecord::Schema.define(version: 2021_02_01_031746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_141752) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "public", default: false
     t.integer "water", default: 2
+    t.float "activity_level"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
