@@ -10,7 +10,8 @@ Content-Type: application/json
     "goal_weight" : 20,
     "age" : 40,
     "public" : false,
-    "water" : 3
+    "water" : 3,
+    "activity_level" : 1.5
 }
 
 ### Show method for id 1
