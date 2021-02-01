@@ -34,6 +34,10 @@ before_action :set_user, only: [:show, :update, :destroy]
         render json: 204
     end
 
+    def random
+        @public_users = User.where(public: true)
+        render json: @public_users.sample
+    end
 
     private
     def user_params
