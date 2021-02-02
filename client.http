@@ -3,8 +3,10 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "username" : "test5",
-    "password_digest" : "Password1",
+    "user" : {
+    "username" : "test17",
+    "password" : "Password1",
+    "password_confirmation" : "Password1",
     "height" : 5,
     "weight": 10,
     "goal_weight" : 20,
@@ -12,6 +14,7 @@ Content-Type: application/json
     "public" : false,
     "water" : 3,
     "activity_level" : 1.5
+    }
 }
 
 ### Show method for id 1

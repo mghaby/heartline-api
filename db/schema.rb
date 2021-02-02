@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_01_031746) do
+ActiveRecord::Schema.define(version: 2021_02_02_011918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password_digest"
     t.integer "height"
     t.integer "weight"
     t.integer "goal_weight"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_02_01_031746) do
     t.boolean "public", default: false
     t.integer "water", default: 2
     t.float "activity_level"
+    t.string "password_digest"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
