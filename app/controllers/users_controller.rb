@@ -39,6 +39,17 @@ before_action :set_user, only: [:show, :update, :destroy]
         render json: @public_users.sample
     end
 
+    def sign_in 
+        @user = User.find_by_username(params[:username])
+        if @user && @user.authenticate(params[:password])
+            auth_token = Knock::AuthToken.new payload: {sub: @user.id}
+            render json: {username: @user.username, jwt: auth_token.token}, status: 200
+        else
+            render json: {error: "Incorrect Username or Password"}, status: 404 
+
+        end
+    end
+
     private
     def user_params
         params.require(:user).permit(:username, :password, :password_confirmation, :height, :weight, :goal_weight, :age, :public, :water, :activity_level)

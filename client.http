@@ -36,3 +36,13 @@ DELETE http://localhost:3000/api/users/1
 
 ### random user for public true
 GET http://localhost:3000/api/users/random
+
+
+### checking login
+POST http://localhost:3000/api/users/sign_in
+Content-Type: application/json
+
+{
+    "username" : "test5",
+    "password" : "Password1"
+}
