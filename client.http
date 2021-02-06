@@ -4,16 +4,17 @@ Content-Type: application/json
 
 {
     "user" : {
-    "username" : "test17",
+    "username" : "test22",
     "password" : "Password1",
     "password_confirmation" : "Password1",
     "height" : 5,
     "weight": 10,
     "goal_weight" : 20,
     "age" : 40,
-    "public" : false,
+    "public" : true,
     "water" : 3,
-    "activity_level" : 1.5
+    "activity_level" : 1.5,
+    "mf" : 5
     }
 }
 
