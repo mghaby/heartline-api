@@ -10,6 +10,5 @@ class User < ApplicationRecord
   validates :activity_level, presence: true
   validates :height, presence: true
   validates :water, presence: true
-  validates :public, presence: true
 
 end
