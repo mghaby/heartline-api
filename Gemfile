@@ -19,6 +19,7 @@ gem 'knock'
 gem 'rspec'
 gem 'rspec-rails'
 gem 'faker'
+gem 'factory_bot_rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
