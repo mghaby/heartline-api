@@ -3,8 +3,8 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "user" : {
-    "username" : "test23",
+
+    "username" : "test701",
     "password" : "Password1",
     "password_confirmation" : "Password1",
     "height" : 5,
@@ -15,22 +15,24 @@ Content-Type: application/json
     "water" : 3,
     "activity_level" : 1.5,
     "mf" : 5
-    }
+    
 }
 
 ### Show method for id 1
-GET http://localhost:3000/api/users/1
+GET http://localhost:3000/api/users/3
 
 
 ### update id 1
-PUT http://localhost:3000/api/users/1
+PUT http://localhost:3000/api/users/3
 Content-Type: application/json
 
 {
+    "user" : {
     "username" : "updated_user",
     "password" : "Password1",
     "mf" : "5",
-    "public" : false
+    "public" : true
+    }
 }
 
 
