@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
 
-    "username" : "test781",
+    "username" : "mg111222",
     "password" : "Password1",
     "password_confirmation" : "Password1",
     "height" : 5,
@@ -19,20 +19,20 @@ Content-Type: application/json
 }
 
 ### Show method for id 1
-GET http://localhost:3000/api/users/3
+GET http://localhost:3000/api/users/15
 
 
 ### update id 1
-PUT http://localhost:3000/api/users/3
+PUT http://localhost:3000/api/users/5
 Content-Type: application/json
 
 {
-    "user" : {
-    "username" : "updated_user",
+    
+    "username" : "mg111",
     "password" : "Password1",
-    "mf" : "5",
+    "mf" : "121",
     "public" : true
-    }
+
 }
 
 
@@ -49,6 +49,6 @@ POST http://localhost:3000/api/users/sign_in
 Content-Type: application/json
 
 {
-    "username" : "test23",
+    "username" : "mg111",
     "password" : "Password1"
 }

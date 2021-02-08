@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 before_action :set_user, only: [:show, :update, :destroy]
+# before_action :authenticate_user, only: [:update]
+
     # def index
     #     @users = User.all
     #     render json: @users
@@ -9,7 +11,7 @@ before_action :set_user, only: [:show, :update, :destroy]
         @user = User.create(user_params)
         if @user.save
             auth_token = Knock::AuthToken.new payload: {sub: @user.id}
-            render json: {username: @user.username, jwt: auth_token.token}, status: :created
+            render json: {id: @user.id, jwt: auth_token.token}, status: :created
         else
             render json: @user.errors, status: :unprocessable_entity
         end 
@@ -43,7 +45,7 @@ before_action :set_user, only: [:show, :update, :destroy]
         @user = User.find_by_username(params[:username])
         if @user && @user.authenticate(params[:password])
             auth_token = Knock::AuthToken.new payload: {sub: @user.id}
-            render json: {username: @user.username, jwt: auth_token.token}, status: 200
+            render json: {id: @user.id, jwt: auth_token.token}, status: 200
         else
             render json: {error: "Incorrect Username or Password"}, status: 404 
 
@@ -51,6 +53,7 @@ before_action :set_user, only: [:show, :update, :destroy]
     end
 
     private
+
     def user_params
         params.permit(:user, :username, :password, :password_confirmation, :height, :weight, :goal_weight, :age, :public, :water, :activity_level, :mf)
     end
