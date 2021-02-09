@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_093227) do
+ActiveRecord::Schema.define(version: 2021_02_09_074915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_093227) do
     t.float "activity_level"
     t.string "password_digest"
     t.integer "mf"
+    t.integer "calories"
+    t.integer "water_count"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
