@@ -16,6 +16,11 @@ gem 'puma', '~> 4.1'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'knock'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'faker'
+gem 'factory_bot_rails'
+gem 'whenever', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

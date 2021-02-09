@@ -3,26 +3,36 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "username" : "testing2",
-    "password_digest" : "Password1",
+
+    "username" : "mg1112222",
+    "password" : "Password1",
+    "password_confirmation" : "Password1",
     "height" : 5,
     "weight": 10,
     "goal_weight" : 20,
     "age" : 40,
-    "public" : true,
-    "water" : 3
+    "public" : false,
+    "water" : 3,
+    "activity_level" : 1.5,
+    "mf" : 5
+    
 }
 
 ### Show method for id 1
-GET http://localhost:3000/api/users/1
+GET http://localhost:3000/api/users/15
 
 
 ### update id 1
-PUT http://localhost:3000/api/users/1
+PUT http://localhost:3000/api/users/5
 Content-Type: application/json
 
 {
-    "username" : "updated_user"
+    
+    "username" : "mg111",
+    "password" : "Password1",
+    "mf" : "121",
+    "public" : true
+
 }
 
 
@@ -30,3 +40,18 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/users/1
 
 
+### random user for public true
+GET http://localhost:3000/api/users/random
+
+
+### checking login
+POST http://localhost:3000/api/users/sign_in
+Content-Type: application/json
+
+{
+    "username" : "mg111",
+    "password" : "Password1"
+}
+
+### reset method check
+PUT http://localhost:3000/api/users/reset
