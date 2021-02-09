@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+set :environment, "production"
+
 
 every :day, at: "12:00 AM" do
     runner "User.reset"
