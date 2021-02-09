@@ -20,6 +20,7 @@ gem 'rspec'
 gem 'rspec-rails'
 gem 'faker'
 gem 'factory_bot_rails'
+gem 'whenever', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

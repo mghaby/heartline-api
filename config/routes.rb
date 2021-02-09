@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope '/api' do
     post '/users', to: 'users#create'
+    # put 'users/reset', to: 'users#reset'
     get '/users/random', to: 'users#random'
     get '/users/:id', to: 'users#show'
     put '/users/:id', to: 'users#update'

@@ -52,3 +52,6 @@ Content-Type: application/json
     "username" : "mg111",
     "password" : "Password1"
 }
+
+### reset method check
+PUT http://localhost:3000/api/users/reset

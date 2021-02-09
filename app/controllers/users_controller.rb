@@ -52,6 +52,11 @@ before_action :set_user, only: [:show, :update, :destroy]
         end
     end
 
+    def reset
+        User.update_all("calories = 0")
+        User.update_all("water_count = 0")
+    end
+
     private
 
     def user_params
