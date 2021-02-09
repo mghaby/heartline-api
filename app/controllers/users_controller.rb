@@ -55,7 +55,7 @@ before_action :set_user, only: [:show, :update, :destroy]
     private
 
     def user_params
-        params.permit(:user, :username, :password, :password_confirmation, :height, :weight, :goal_weight, :age, :public, :water, :activity_level, :mf)
+        params.permit(:user, :username, :password, :password_confirmation, :height, :weight, :goal_weight, :age, :public, :water, :activity_level, :mf, :calories, :water_count)
     end
 
     def set_user
