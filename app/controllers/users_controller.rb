@@ -38,7 +38,17 @@ before_action :set_user, only: [:show, :update, :destroy]
 
     def random
         @public_users = User.where(public: true)
-        render json: @public_users.sample
+        @public_arr = Array.new
+
+        @public_arr << @public_users
+        # @public_arr << @public_users 
+        # @public_arr << @public_users 
+        # @public_arr << @public_users 
+        # @public_arr << @public_users 
+
+        render json: @public_arr, status: 201
+
+        # render json: @public_users.sample, status: 201
     end
 
     def sign_in 
