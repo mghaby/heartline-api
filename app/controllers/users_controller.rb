@@ -11,7 +11,7 @@ before_action :set_user, only: [:show, :update, :destroy]
         @user = User.create(user_params)
         if @user.save
             auth_token = Knock::AuthToken.new payload: {sub: @user.id}
-            render json: {id: @user.id, jwt: auth_token.token}, status: :created
+            render json: {user: @user, id: @user.id, jwt: auth_token.token}, status: :created
         else
             render json: @user.errors, status: :unprocessable_entity
         end 
